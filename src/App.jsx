@@ -13,14 +13,23 @@ import Snack from './components/FoodItem'
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [snacks, setSnacks] = useState([]);
+  const [drinks, setDrinks] = useState([]);
 
   useEffect(() => {
-    async function getSnacks() {
-      let snacks = await SnackOrBoozeApi.getSnacks();
-      setSnacks(snacks);
-      setIsLoading(false);
+    async function fetchData() {
+      setIsLoading(true);
+      try {
+        let snacks = await SnackOrBoozeApi.getSnacks();
+        let drinks = await SnackOrBoozeApi.getDrinks(); // Assuming this method exists
+        setSnacks(snacks);
+        setDrinks(drinks);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      } finally {
+        setIsLoading(false);
+      }
     }
-    getSnacks();
+    fetchData();
   }, []);
 
   if (isLoading) {
@@ -37,7 +46,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1>Vite + React Closure Cafe </h1>
       <BrowserRouter>
         <NavBar />
         <main>
@@ -45,6 +54,8 @@ function App() {
             <Route path="/" element={<Home snacks={snacks} />} />
             <Route path="/snacks" element={<Menu snacks={snacks} title="Snacks" />} />
             <Route path="/snacks/:id" element={<Snack items={snacks} cantFind="/snacks" />} />
+            <Route path="/drinks" element={<Menu snacks={drinks} title="Drinks" />} />
+            <Route path="/drinks/:id" element={<Snack items={drinks} cantFind="/drinks" />} />
             <Route path="*" element={<p>Hmmm. I can't seem to find what you want.</p>} />
           </Routes>
         </main>

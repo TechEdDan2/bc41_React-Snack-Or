@@ -19,6 +19,11 @@ const NavBar = () => {
                         Snacks
                     </NavLink>
                 </Button>
+                <Button color="inherit">
+                    <NavLink to="/drinks" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        Drinks
+                    </NavLink>
+                </Button>
             </Toolbar>
         </AppBar>
     );
