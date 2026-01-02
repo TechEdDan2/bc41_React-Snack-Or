@@ -6,8 +6,8 @@ import './App.css'
 import Home from './components/Home'
 import SnackOrBoozeApi from './helpers/API'
 import NavBar from './components/NavBar'
-import Menu from './components/FoodMenu'
-import Snack from './components/FoodItem'
+import Menu from './components/Menu'
+import Snack from './components/MenuItem'
 
 
 function App() {
@@ -15,6 +15,11 @@ function App() {
   const [snacks, setSnacks] = useState([]);
   const [drinks, setDrinks] = useState([]);
 
+  /**
+   * Fetch snacks and drinks data from the API when the component mounts.
+   * Sets loading state while fetching data.
+   * Handles any errors that may occur during the fetch.
+   */
   useEffect(() => {
     async function fetchData() {
       setIsLoading(true);

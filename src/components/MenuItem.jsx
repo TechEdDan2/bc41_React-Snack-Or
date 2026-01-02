@@ -12,7 +12,7 @@ import Typography from "@mui/material/Typography";
  * @param {string} props.cantFind - The path to navigate to if the item is not found. 
  * @returns - A React component displaying the food / item details or redirecting if not found.
  */
-const FoodItem = ({ items, type, cantFind }) => {
+const MenuItem = ({ items, type, cantFind }) => {
     const { id } = useParams();
 
     let snack = items.find(snack => snack.id === id);
@@ -41,4 +41,4 @@ const FoodItem = ({ items, type, cantFind }) => {
 
 }
 
-export default FoodItem;
+export default MenuItem;
