@@ -17,7 +17,7 @@ This project consists of three parts. The first part is a conceptual exercise wh
 - Frontend Mentor - [@TechEdDan2](https://www.frontendmentor.io/profile/TechEdDan2)
 
 ## Acknowledgments
-The YouTubers and other educational resources I have been learning from include: Coder Coder (Jessica Chan), BringYourOwnLaptop (Daniel Walter Scott), Kevin Powell, Pedro Tech (Vitest tutorial), vairous Udemy courses, Geeks for Geeks, Stack Overflow, MDN Web Docs (Animations), and Stony Brook University's Software Engineering Bootcamp (curriculum developed by Colt Steele). 
+The YouTubers and other educational resources I have been learning from include: Coder Coder (Jessica Chan), BringYourOwnLaptop (Daniel Walter Scott), Kevin Powell, Pedro Tech (Vitest tutorial), The Net Ninja (Shaun Pelling) vairous Udemy courses, Geeks for Geeks, Stack Overflow, MDN Web Docs (Animations), and Stony Brook University's Software Engineering Bootcamp (curriculum developed by Colt Steele). 
 
 ## License
 This project is licensed under the ISC license
