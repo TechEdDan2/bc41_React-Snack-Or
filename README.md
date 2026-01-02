@@ -1,5 +1,5 @@
 # Vite + React Snack Or 'Drink' App
-Three Parter project: 1. Respond to prompts about React Router, 2. Write an unroll function, 3. Build a Snack or 'Drink' App using React and React Router.
+Three Part project: 1. Respond to prompts about React Router, 2. Write an unroll function, 3. Build a Snack or 'Drink' App using React and React Router.
 
 ## Table of Contents
 - [Overview](#overview)
@@ -9,8 +9,23 @@ Three Parter project: 1. Respond to prompts about React Router, 2. Write an unro
 - [Acknowledgments](#acknowledgments)
 - [License](#license)
 
+
 ## Overview
-This project consists of three parts. The first part is a conceptual exercise where I answer questions related to React Router and React concepts. The second part involves writing an `unroll` function that processes nested arrays. The third part is building a Snack or 'Drink' application using React and React Router.
+This project consists of three parts. The first part is a conceptual exercise where I answer questions related to React Router and React concepts. The second part involves writing an `unroll` function that processes nested arrays. The third part is building a Snack or 'Drink' application using React and React Router. The application allows users to view a list of snacks and drinks, and see detailed information about each item. The app is styled using Material-UI components.
+
+## Technologies Used
+- React
+- React Router
+- Material-UI
+- Vite
+
+## Setup Instructions
+1. Clone the repository to your local machine.
+2. Navigate to the project directory.
+3. Install the necessary dependencies using npm
+4. Start the development server with npm
+5. Open your web browser and go to `http://localhost:5173` to view the application.
+
 
 ## Author
 - Github - [TechEdDan2](https://github.com/TechEdDan2)

@@ -1,0 +1,4 @@
+.item-text:hover .MuiListItemText-root {
+    font-style: italic;
+    color: chocolate
+}

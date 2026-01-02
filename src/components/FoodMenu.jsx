@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import "./FoodMenu.css";
+import "./FoodMenu.css";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
@@ -9,7 +9,13 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 
-const FoodMenu = ({ snacks }) => {
+/**
+ * This component displays a menu of food items (snacks or drinks).
+ * @param {Array} props.snacks - The list of food items to display.
+ * @param {string} props.type - The type of food items (e.g., "snacks" or "drinks"). 
+ * @returns - A React component displaying the food menu. 
+ */
+const FoodMenu = ({ snacks, type }) => {
     return (
         <section className="col-md-4">
             <Card>
@@ -23,7 +29,9 @@ const FoodMenu = ({ snacks }) => {
                     </Typography>
                     <List>
                         {snacks.map((snack) => (
-                            <Link to={`/snacks/${snack.id}`} key={snack.id} style={{ textDecoration: 'none', color: 'inherit' }}>
+                            // <Link to={`/snacks/${snack.id}`} key={snack.id} style={{ textDecoration: 'none', color: 'inherit' }}>
+                            <Link to={`/${type}/${snack.id}`} key={snack.id} style={{ textDecoration: 'none', color: 'inherit' }} className="item-text">
+
                                 <ListItem disablePadding>
                                     <ListItemButton>
                                         <ListItemText primary={snack.name} />

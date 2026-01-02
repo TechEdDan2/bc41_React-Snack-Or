@@ -52,10 +52,10 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home snacks={snacks} />} />
-            <Route path="/snacks" element={<Menu snacks={snacks} title="Snacks" />} />
-            <Route path="/snacks/:id" element={<Snack items={snacks} cantFind="/snacks" />} />
-            <Route path="/drinks" element={<Menu snacks={drinks} title="Drinks" />} />
-            <Route path="/drinks/:id" element={<Snack items={drinks} cantFind="/drinks" />} />
+            <Route path="/snacks" element={<Menu snacks={snacks} title="Snacks" type="snacks" />} />
+            <Route path="/snacks/:id" element={<Snack items={snacks} type="snacks" cantFind="/snacks" />} />
+            <Route path="/drinks" element={<Menu snacks={drinks} type="drinks" title="Drinks" />} />
+            <Route path="/drinks/:id" element={<Snack items={drinks} type="drinks" cantFind="/drinks" />} />
             <Route path="*" element={<p>Hmmm. I can't seem to find what you want.</p>} />
           </Routes>
         </main>
